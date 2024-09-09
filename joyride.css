@@ -1,0 +1,28 @@
+.center {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+body {
+font-size:100px;
+}
+/* unvisited link */
+a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  } 
