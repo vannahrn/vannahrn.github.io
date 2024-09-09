@@ -1,28 +1,41 @@
-.center {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-}
 body {
-font-size:100px;
+font-size:35px;
+}
+
+/* link */
+a {
+  font-size:100px
 }
 /* unvisited link */
 a:link {
-    color: white;
+    color: black;
+    background-color:black;
   }
   
   /* visited link */
   a:visited {
-    color: white;
+    color: black;
   }
   
   /* mouse over link */
   a:hover {
-    color: hotpink;
+    color: #e6308a;
   }
   
   /* selected link */
   a:active {
     color: blue;
   } 
+
+.joyride {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.textbox {
+  margin: 0 auto;
+  width: 30%;
+  margin-top:10%;
+}
