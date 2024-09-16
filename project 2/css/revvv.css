@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color:#5928ed;
+    cursor: crosshair;
   }
   
   header {
@@ -24,6 +25,7 @@ body {
 
   img:hover {
     filter:saturate(100%);
+    cursor: help;
   }
 
   main {

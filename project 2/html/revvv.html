@@ -15,10 +15,16 @@
         <h1><i>I'M LOOKING FOR A GOOD TIME</i></h1>
       </header>
     
+      <script>
+        function tooEarly() {
+          alert("TOO EARLY!");
+        }
+        </script>
+
       <main>
         <div class="grid-container">
-          <div class="box"><img src="../html/morning.jpg" alt="morning sky"><br><p>MORNING</p></div>
-          <div class="box"><img src="../html/noon.jpg" alt="the sky at noon"><br><p>NOON</p></div>
+          <div class="box"><img src="../html/morning.jpg" onclick="tooEarly()" alt="morning sky"><br><p>MORNING</p></div>
+          <div class="box"><img src="../html/noon.jpg" onclick="tooEarly()" alt="the sky at noon"><br><p>NOON</p></div>
           <div class="box"><a href="../html/engine.html"><img src="../html/night.webp" alt="busy street at night time"><br><p>TONIGHT</p></a></div>
         </div>
       </main>
