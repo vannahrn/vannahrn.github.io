@@ -1,0 +1,57 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#5928ed;
+  }
+  
+  header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image:url(https://krita-artists.org/uploads/default/original/3X/d/8/d828ebd0be622e51b59c51564d837e2a2263cfb4.gif);
+
+  }
+
+  img {
+    border:10px solid black;
+    width:20vw;
+    height:20vw;
+    object-fit:cover;
+    filter:saturate(0%);
+  }
+
+  img:hover {
+    filter:saturate(100%);
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+  }
+  
+  .box {
+    background-color: #5928ed;
+    font-weight:600;
+    padding: 20px;
+    text-align: center;
+    font-size:3vw;
+  }
+  
+  a {
+    text-decoration:none;
+    color:black;
+  }
+
+  a:visited {
+    color:black;
+  }
