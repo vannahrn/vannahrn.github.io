@@ -7,44 +7,32 @@
     <meta name="author" content="Savannah Nelson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../project_3/style.css">
-    <title>girlplay.com</title>
+    <title>GIRLPLAY.COM 🔞</title>
 </head>
 
 <body>
 
-<!--this is a script that makes the tab title appear to type itself out-->
-<!--old tumblr code i used to use all the time: https://academyoftumblr.tumblr.com/post/10896016175/typing-moving-title-bar-->
-<script type="text/javascript">
-        var rev = "fwd";
-        function titlebar(val)
-        {
-        var msg = "GIRLPLAY.COM 🔞";
-        var res = " ";
-        var speed = 100;
-        var pos = val;
-        msg = "GIRLPLAY.COM 🔞";
-        var le = msg.length;
-        if(rev == "fwd"){
-        if(pos < le){
-        pos = pos+1;
-        scroll = msg.substr(0,pos);
-        document.title = scroll;
-        timer = window.setTimeout("titlebar("+pos+")",speed);}
-        else{
-        rev = "bwd";
-        timer = window.setTimeout("titlebar("+pos+")",speed);}}
-        else{
-        if(pos > 0){
-        pos = pos-1;
-        var ale = le-pos;
-        scrol = msg.substr(ale,le);
-        document.title = scrol;
-        timer = window.setTimeout("titlebar("+pos+")",speed);}
-        else{
-        rev = "fwd";
-        timer = window.setTimeout("titlebar("+pos+")",speed);
-        }}}
-        titlebar(0);
+<!--age verification script from chatgpt-->
+
+<script>
+    // Prompt the user for their age when the site loads
+    window.onload = function() {
+        let userAge = prompt("Please enter your age:");
+
+        if (userAge && !isNaN(userAge)) {
+            userAge = parseInt(userAge);
+            
+            if (userAge <= 18) {
+                alert("WELCOME 2 GIRLPLAY SHHHHH DON'T TELL U PARENTZ");
+            } else {
+                alert("GOODBYE OLD HAG");
+                window.location.href = "UR.TOO.OLD";
+            }
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+            window.location.reload();
+        }
+    };
 </script>
 
 <header> <img src="logo.gif"> </header>
@@ -77,7 +65,7 @@
 <h3 class="center"><b>be a big girl</b></h3>
 <br><p>at girlplay.com, we offer the sexiest and coolest games 4 u, like for real! u can escape ur girlhood and b the sexy woman u are. no more barbiez, time 4 big girl toys.</p>
 <img src="laying.png" style="height:50px; float:right;">
-<p>r u ready 2 be a woman? this is what it takez. play these games n learn how 2 <i>play</i> like a woman.</p>
+<p>r u ready 2 be a woman? this is what it takez. play these games n learn how 2 <b><i>play</i> like a woman.</b></p>
 </div>
     <div class="grid-item item3">
 
