@@ -132,7 +132,7 @@ button:hover {
     grid-row: 2;
     width:auto;
     color:white;
-    background:black;
+    background-color:black;
     border:15px solid #f8b8d0;
     border-radius:0px 0px 30px 0px;
   }
