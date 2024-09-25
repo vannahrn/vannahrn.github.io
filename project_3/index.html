@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="en" dir = "ltr" >
+    <meta name="description" content="Layouts: Project 3">
+    <meta name="keywords" content="Layouts">
+    <meta name="author" content="Savannah Nelson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project_3/style.css">
+    <title>girlplay.com</title>
+</head>
+
+<body>
+
+<!--this is a script that makes the tab title appear to type itself out-->
+<!--old tumblr code i used to use all the time: https://academyoftumblr.tumblr.com/post/10896016175/typing-moving-title-bar-->
+<script type="text/javascript">
+        var rev = "fwd";
+        function titlebar(val)
+        {
+        var msg = "GIRLPLAY.COM 🔞";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = "GIRLPLAY.COM 🔞";
+        var le = msg.length;
+        if(rev == "fwd"){
+        if(pos < le){
+        pos = pos+1;
+        scroll = msg.substr(0,pos);
+        document.title = scroll;
+        timer = window.setTimeout("titlebar("+pos+")",speed);}
+        else{
+        rev = "bwd";
+        timer = window.setTimeout("titlebar("+pos+")",speed);}}
+        else{
+        if(pos > 0){
+        pos = pos-1;
+        var ale = le-pos;
+        scrol = msg.substr(ale,le);
+        document.title = scrol;
+        timer = window.setTimeout("titlebar("+pos+")",speed);}
+        else{
+        rev = "fwd";
+        timer = window.setTimeout("titlebar("+pos+")",speed);
+        }}}
+        titlebar(0);
+</script>
+
+<header> <img src="logo.gif"> </header>
+<div class="grid-container">
+    <div class="grid-item item1">
+        <nav>
+        <button><img src="home.gif" alt="sparkly text that says home"></button>
+
+        <button><img src="4girls.gif" alt="sparkly text that says kinks for girls"></button>
+
+        <button><img src="luv.gif" alt="sparkly text that says what boys love"></button>
+
+        <button><img src="howto.gif" alt="sparkly text that says how to be sexy"></button>
+        </nav>
+    </div>
+
+    <div class="grid-item item2">
+        
+        <h1><marquee>WELCOME 2 GIRLPLAY</marquee></h1>
+
+        <div class="flash-container">
+            <img src="barbie.png" class="animated-image">
+        </div>
+    
+<p class="left">tired of being a little <b>girl?</b></p>
+<p class="right">become a <b>sex symbol</b></p>
+<p class="left">you can please a man</p>
+<p class="center" style="color:#bb587c">you can please a man</p>
+<p class="right" style="color:#de82a4">you can please a man</p>
+<h3 class="center"><b>be a big girl</b></h3>
+<br><p>at girlplay.com, we offer the sexiest and coolest games 4 u, like for real! u can escape ur girlhood and b the sexy woman u are. no more barbiez, time 4 big girl toys.</p>
+<img src="laying.png" style="height:50px; float:right;">
+<p>r u ready 2 be a woman? this is what it takez. play these games n learn how 2 <i>play</i> like a woman.</p>
+</div>
+    <div class="grid-item item3">
+
+        <div class="flex-container">
+            <div><img src="bondagebarbie.png" alt="barbie doll in bondage"><button>BARBIE BONDAGE</button></div>
+            <div><img src="gdress.png" alt="gimp doll"><button>GIMP DRESS UP</button></div>
+            <div><img src="kiss.png" alt="2 dolls kissing"><button>GIRLS KISSING</button></div>  
+            <div><img src="nurse.png" alt="2 anime girls dressed as nurses"><button>FUN ROLEPLAY</button></div>
+            <div><img src="choke.png" alt="woman being choked"><button>SUGARDADDY SIM</button></div>
+            <div><img src="knife.png" alt="assortment of knives"><button>CUT HER UP</button></div>  
+            <div><img src="ddlg.png" alt="woman being hugged by man"><button>DADDYS GIRL</button></div>
+            <div><img src="dom.png" alt="dom woman with tied up man"><button>DOM MAKEOVER</button></div>
+          </div>
+
+    </div>  
+</div>
+
+<footer>
+created by savannah nelson © 2024
+</footer>
+</body>
