@@ -139,13 +139,16 @@ button:hover {
 
 @media only screen and (max-width:800px) {
     .grid-container {
-    width:300px;
+        width:400px;
     }
     .flex-container div {
-    width:50px;
+        width: 500px;
     }
     button img {
-        height:15px;
+        height:10px;
+    }
+    .flash-container img {
+        top:0px;
     }
 }
 
