@@ -6,12 +6,38 @@
     <meta name="keywords" content="Javascript">
     <meta name="author" content="Savannah Nelson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/project_4/style.css">
+    <link rel="stylesheet" href="../project_4/style.css">
     <title>AFFIRMATIONS</title>
 </head>
 
 <body>
 
-    <button>hi</button>
+    <header></header>
 
+        <div class="grid-container">
+            <div class="grid-item item1">
+
+    <!--
+    1) phrases = array w 10 phrases/"affirmations"
+    2) randomIndex = generates a random number by examining how many phrases are in the array (.length)
+    3) getElementByID calls the html element, in this case output. textContent further defines it as text.
+    tbh idk if i did this optimally especially the math part its been awhile since i did javascript
+    -->
+    <script>
+        function generatePhrase() {
+            const phrases = ["YOU WILL PASS YOUR MIDTERMS", "THEY WILL TEXT YOU BACK", "YOU WILL NOT SUCCUMB TO THE DRUNK CIG", "YOU WILL NOT SKIP YOUR 8AM", "YOU WILL GET PAID SIMPLY FOR BEING BEAUTIFUL", "YOU WILL GET A DUKE TICKET", "YOU WILL NOT DIE IN A TORNADO", "YOU WILL HAVE ENOUGH MONEY FOR A SWEET TREAT", "YOU WILL MAKE DEANS LIST THIS SEMESTER", "YOU WILL GET 1 TRILLION JOB OFFERS POST GRAD"];
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById("output").textContent = phrases[randomIndex];
+        }
+    </script>
+                
+            <p id="output">What do you need to hear right now?</p></div>
+        
+            <div class="grid-item item2">
+            <button onclick="generatePhrase()">CLICK HERE FOR YOUR AFFIRMATION</button>
+
+            </div>
+        </div>
+
+    <footer>created by savannah nelson © 2024</footer>
 </body>
