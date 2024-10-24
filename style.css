@@ -1,207 +1,133 @@
-
-/* notes: spend some time making comments on how Flexbox and Grid are working here and
-personalize this portfolio page using google fonts, different colors, different hover and active styling, maybe a different layout or viewport response*/
-
 *{
     box-sizing: border-box;
     margin: 0 auto;
+    overflow:scroll;
 }
-    
-    /*this is how I do the border box fix from the "the box model layouts in CSS from flexbox to grid" LinkedIn Learning
-    https://www.linkedin.com/learning-login/share?account=42563596&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcss-layouts-from-float-to-flexbox-and-grid%2Fthe-box-model-and-layouts%3Ftrk%3Dshare_video_url%26shareId%3DnbY4ZLwhR2KIGIplOu9BiA%253D%253D*/
 
 body{
-    cursor:crosshair;
+    color:white;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header, footer {
-    font-family:'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    color:white;
-    background-image:url(https://krita-artists.org/uploads/default/original/3X/d/8/d828ebd0be622e51b59c51564d837e2a2263cfb4.gif);
-    /* background-color: rgb(82, 99, 69);  play with a color scheme! */
-}
-
 main {
-    font-family: 'Courier New', Courier, monospace; /* try using a google font instead*/
+    width:100%;
+    padding:50px;
+    background-color:black;
 }
 
-/*box that holds nav buttons*/
-nav {
-    width:40vw;
-    height: 100px;
+i {
+    color:gray;
 }
-
-#nav-links {
-    display: flex;
-    justify-content: center;
-    padding-top:25px;
-}
-
-/*rainbow text hover, from codepen*/
-.rainbow:hover {
-    -webkit-animation:rainbow 1s infinite;
-    -ms-animation:rainbow 1s infinite;
-    -o-animation:rainbow 1s infinite;
-    animation:rainbow 1s infinite;
-    }
-    @-webkit-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @-ms-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @-o-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-
-/*button styling*/
-button {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    font-weight:600;
-    color: #ff00d9;
-    padding: 10px 15px;
-    text-align: center;
-    display: inline-block;
-    font-size:calc(5px + 1vw);
-  } 
-
-#page_title{
-    grid-column: 1/4;
-    text-align: center;
-    max-width: 100%;
-    padding: 25px;
-}
-
-h1 {
-    font-family:'Courier New', Courier, monospace;
-    font-size:30px;
+h3 {
+    padding:10px 0;
+    font-size:20px;
 }
 
 h2 {
-    font-family:'Courier New', Courier, monospace;
-    font-size:15px;
+    color:gray;
+    font-weight:normal;
+    font-size:20px;
+}
+
+caption {
+    font-size:12px;
 }
 
 
-
-#projects-grid{
+.grid-container {
     display: grid;
-    max-width: 1000px;
-    grid-template-columns: auto auto auto; /* question: what does fr mean? answer: fraction*/
-    grid-template-rows: auto; /*adjust rows according to screen*/
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
-    padding-bottom:25px;
-    /* background: rgba(102, 119, 59, 0.5);  play with color*/
-    
-} 
-
-.project_item {
-    color:white;
-    display: grid;  /* we have a grid inside a grid here, with each item as its own grid*/
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "image number"
-    "image title"
-    "image description";
-    grid-column-gap: 10px;
-    align-items: center;
-    background:black; /*  play with color*/
+    grid-template-columns: 50% 50%;
+    margin:50px;
+    gap:50px;
+    overflow:hidden;
 }
+  
+.grid-container > div {
+    text-align: left;
+    width:100%;
+    overflow:hidden;
+    word-wrap:break-word;
 
-.project_image { 
-    grid-area: image;
-    border:2px solid red;
-    width:125px;
-    height:300px;
+    
+}
+.grid-container img {
+    width:100%;
+    height:200px;
     object-fit:cover;
-
-}
-.project_number { 
-    grid-area: number; 
-    border:2px solid red;
-
-}
-.project_title { 
-    grid-area: title; 
-    border:2px solid red;
-
-}
-.project-description { 
-    grid-area: description;
-    border:2px solid red;
-    font-size:12px; 
-} 
-iframe{ border: 2px solid green; }
-
-
-@media only screen and (min-width: 601px) and (max-width: 850px){ /* what is going on here?*/
-    #projects-grid{
-    grid-template-columns: 1fr 1fr;
-    }
-    
-    #page_title{
-        grid-column: 1/3;
-    }
+    object-position:center;
+    border:0px solid black;
+    transition:.2s;
 }
 
-@media only screen and (max-width: 600px){
-    #projects-grid{
-    grid-template-columns: 1fr;
-    }
-    
-    #page_title{
-        grid-column: 1/2;
-    }
+/*
+.grid-container img:hover {
+    border:10px solid black;
+    rotate:calc(1deg);
+    filter: brightness(150%);
+    transition:.2s;
+}
+*/
+a {
+    text-decoration:none;
+    color:darkseagreen;
+}
+
+p {
+    color:white;
+}
+ 
+/* header + grid */
+header {
+    width:100%;
+    background-color:darkslategrey;
+    color:white;
+    height:auto;
+    padding:15px 20px 15px 20px;
+    top:0;
+    position:sticky;
+}
+
+header a {
+    text-decoration:none;
+    color:white;
+    transition:.2s;
+}
+
+header a:hover {
+    color:gray;
+    transition:.2s;
+
+}
+
+/* footer */
+footer {
+    background-color:darkslategray;
+    color:white;
+    width:100%;
+    text-align:center;
+    padding: 50px 0px 100px 0px;
+}
+
+footer img {
+    height:25px;
+}
+
+.footer-container {
+    display:grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    width:100%;
+    grid-gap:10px;
+    align-items:center;
+    align-content:center;
+}
+
+.tag {
+    font-size: 12px;
+    padding:5px;
+}
+
+.icons img:hover {
+    cursor:help;
 }
