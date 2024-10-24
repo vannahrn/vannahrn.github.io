@@ -2,11 +2,13 @@
     box-sizing: border-box;
     margin: 0 auto;
     overflow:scroll;
+    scroll-behavior: smooth;
+    
 }
 
 body{
     color:white;
-    background-color: white;
+    background-color: darkslategray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -19,9 +21,14 @@ main {
 i {
     color:gray;
 }
+
+h1 {
+    font-family: "Space Mono", monospace;
+}
 h3 {
     padding:10px 0;
     font-size:20px;
+    font-family: "Space Mono", monospace;
 }
 
 h2 {
@@ -60,14 +67,6 @@ caption {
     transition:.2s;
 }
 
-/*
-.grid-container img:hover {
-    border:10px solid black;
-    rotate:calc(1deg);
-    filter: brightness(150%);
-    transition:.2s;
-}
-*/
 a {
     text-decoration:none;
     color:darkseagreen;
@@ -84,9 +83,11 @@ header {
     color:white;
     height:auto;
     padding:15px 20px 15px 20px;
-    top:0;
-    position:sticky;
 }
+.header {
+    position: sticky;
+    top: 0;
+  }
 
 header a {
     text-decoration:none;
@@ -131,3 +132,46 @@ footer img {
 .icons img:hover {
     cursor:help;
 }
+
+/*back to top button*/
+
+#myBtn {
+    width: 50px;
+    height: 50px;
+    transition: opacity 1s ease-in-out;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: #fff;
+    background-color: darkseagreen;
+    opacity: 0;
+}
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  

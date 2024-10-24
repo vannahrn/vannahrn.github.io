@@ -14,12 +14,33 @@
     
     <!--favicon and title-->
     <link rel="icon" type="image/x-icon" href="../vannahrn/images/favicon.gif">
-    <title>P0RTF0LI0</title>
+    <title>Savannah Nelson | Class Projects
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
     <body>
-        <header>
+        <header class="header">
             <h1><a href="./index.html">Savannah Nelson</a></h1>
+        
+            <script>
+                window.onscroll = function() {myFunction()};
+                
+                var header = document.getElementById("myHeader");
+                var sticky = header.offsetTop;
+                
+                function myFunction() {
+                  if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                  } else {
+                    header.classList.remove("sticky");
+                  }
+                }
+                </script>
+        
         </header>
         <main>
                     <h1>COMM150 Projects</h1>
@@ -30,7 +51,7 @@
                     <a href="./COMM150/html/index.html">
                     <img src="https://quotefancy.com/media/wallpaper/3840x2160/8151353-Hello-World-Wallpaper.jpg">
                     <h3><a href="./COMM150/html/index.html">Sample Website</a></h3>
-                    <p>Basic HTML website displaying some text and an image.</p>
+                    <p><b>Assignment 7-B.</b> Basic HTML website displaying some text and an image.</p>
                     </a>
                 </div>
             </div>
@@ -83,11 +104,31 @@
                     <a href="./project_5/index.html">
                     <img src="https://static.wixstatic.com/media/0e0314_985b66bb51f24780b94f0711b6de7113~mv2.jpg/v1/fill/w_924,h_608,al_c,q_85,enc_auto/0e0314_985b66bb51f24780b94f0711b6de7113~mv2.jpg">
                     <h3><a href="./project_5/index.html">Personal Website: To Brand or Not To Brand</a></h3>
-                    <p>Built a website that represents my professional aspirations and displays my portfolio.<br><i>This website is extensive, responsive, and interactive.</i></p>
+                    <p>Built a website that represents my professional aspirations and hosts my portfolio.<br><i>This website is extensive, responsive, and interactive.</i></p>
                     </a>
                 </div>
             </div>
-            
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+
+            <script>
+                window.onscroll = function() {scrollFunction()};
+             
+                function scrollFunction() {
+                   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                      document.getElementById("myBtn").style.opacity = "1";
+                   } else {
+                      document.getElementById("myBtn").style.opacity = "0";
+                   }
+                }
+             
+                function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+             </script>
+                
+
         </main>
         <footer>
             <div class="footer-container">
