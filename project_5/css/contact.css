@@ -99,47 +99,45 @@ nav {
     background-color:#e6308a;
 }
 
-.rainbow:hover {
-    -webkit-animation:rainbow 1s infinite;
-    -ms-animation:rainbow 1s infinite;
-    -o-animation:rainbow 1s infinite;
-    animation:rainbow 1s infinite;
-}
-
-
 /* main - holds content under header */
 main {
     width:100%;
     background:black;
     color:white;
-    height:90%;
+    height:auto;
 }
 
 /*homepage grid content*/
 .home-container {
     display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
     width:100%;
     height:auto;
-    padding:5vw 12vw 5vw 12vw;
-    grid-gap:80px;
+    grid-gap:20px;
     align-items:center;
+    padding: 10vh 0;
+    align-content:center;
+    text-align:center;
 }
 
-.left {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.top {
+    align-self:center;
+    grid-row-start:1;
+    grid-row-end:2;
 }
 
-.right {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    animation: fadeInAnimation ease 3.5s;
+.top img {
+    height:350px;
+}
+.bottom {
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.bottom img {
+    width:50px;
+    padding:5px;
 }
 
 @keyframes fadeInAnimation {
@@ -165,132 +163,6 @@ h2 {
 
 p {
     font-size:20px;
-}
-
-
-/*homepage grid content*/
-.images-container {
-    display:grid;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width:100%;
-    grid-gap:10px;
-}
-
-.item {
-    transition-duration:.2s;
-    border:0px solid black;
-
-    
-}
-.item:hover {
-    filter:brightness(150%);
-    transition-duration:.2s;
-    border:10px solid black;
-}
-
-.item-1 {
-    background-image:url("images/tiles.gif");
-    background-size:auto 100%;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 6;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    transition-duration:.4s;
-}
-
-.item-2 {
-    background-image:url("maintest.jpg");
-    background-size:100% auto;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-}
-
-.item-3 {
-    background-image:url("images/yh2c2gb.png");
-    background-size: 100% auto;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-}
-
-.item-4 {
-    background-image:url("maintest.jpg");
-    background-size:auto 100%;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 6;
-    grid-row-end: 9;
-    grid-column-start: 4;
-    grid-column-end: 6;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-}
-
-.item-5 {
-    background-image:url("maintest.jpg");
-    background-size:auto 100%;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    grid-column-start: 6;
-    grid-column-end: 8;
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-}
-
-.item-6 {
-    background-image:url("maintest.jpg");
-    background-size: 100% auto;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 8;
-    grid-column-end: 10;
-    animation: fadeInAnimation ease 3.5s;
-    animation-iteration-count: 1;
-}
-
-.item-7 {
-    background-image:url("maintest.jpg");
-    background-size:100% auto;
-    background-position:center;
-    object-fit:fill;
-    grid-row-start: 4;
-    grid-row-end: 7;
-    grid-column-start: 6;
-    grid-column-end: 11;
-    animation: fadeInAnimation ease 3.5s;
-    animation-iteration-count: 1;
-}
-
-.item-8 {
-    background-image:url("maintest.jpg");
-    background-size:100%;
-    object-fit:fill;
-    grid-row-start: 7;
-    grid-row-end: 9;
-    grid-column-start: 6;
-    grid-column-end: 9;
-    animation: fadeInAnimation ease 3.5s;
-    animation-iteration-count: 1;
 }
 
 /* footer */
