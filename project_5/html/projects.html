@@ -6,7 +6,7 @@
     <meta name="author" content="Savannah Nelson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/projects.css">
-    <title>Savannah Nelson</title>
+    <title>Savannah Nelson | Projects</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,25 +36,57 @@
 
         <!--home top-->
 
-        <div class="part uiux">
-            <h2>UI/UX Design</h2>
-            <p>Utilizing <b>Figma</b>, I create fictional iOS apps. Wireframing to prototyping.</p>
-        
-        </div>
-
         <div class="part projs">
-            <div class="project-container">
-                <div class="proj item">
-                <img src="../images/maintest.jpg">
-                <h1>hello</h1>
-                </div>
-                <div class="proj item">hello</div>
-                <div class="proj item">hello</div>
-                <div class="proj item">boop</div>
+            <h2>Featured projects</h2>
+            <i>Click a title below for more details.</i>
+            <br><br>
+            <div class="select">
+                <button class="project" onclick="openCity(event, 'spotify2')">Spotify Recreation</button>
+                <button class="project" onclick="openCity(event, 'girltime')">Girl Time</button>
+                <button class="project" onclick="openCity(event, 'kinglunar')">King Lunar</button>
             </div>
-        </div>
-        
 
+            <div id="spotify2" class="info title" style="display:none">
+                <h2>Spotify Project</h2>
+                <p><i>App Team Carolina Spring Gala, Spring 2024</i></p><br>
+                <p>In this recreation of Spotify, I added a new feature called <b>Concerts</b>. This feature would help cut out the middle man of concert-finding apps and other conviluted methods of hearing about nearby shows. Theorhetically, this feature would also work in tandem with your listening history/data to ensure the best recommendations for you while also considering your location and other preferences.</p><br>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/YGFJ83uFfzjRpgQtMn2b4U/Savannah---Spotify?node-id=1-2&node-type=canvas&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&embed-host=share" allowfullscreen></iframe>
+            </div>
+            
+            <div id="girltime" class="info title" style="display:none">
+                <h2>Girl Time</h2>
+                <p><i>COMM638, Spring 2024</i></p><br>
+                <p>Using Unity game engine, I created an experience to encapsulate the everyday stressors of living with a chronic illness. More specifically, I wanted to capture how my life feels living with Poly Cystic Ovary Syndrome (PCOS). This race-against-time complete-all-the-tasks girly game is my proudest work!</p><br>
+                <p>Users have to complete a certain number of daily tasks (i.e., eat, take medicine, brush teeth, etc) in a given time frame. Completing tasks will make the completition bar go up. Completing nonoptimal tasks will cause the bar to shoot down significantly. Even when users do complete the optimal tasks, the completion bar slowly depletes. At the end of the timer, the user will be judged on their completion. There are three outcomes: bad, okay, good.</p>
+                <br>
+                <iframe width="auto" height="auto" src="https://www.youtube.com/embed/D_DTcCdG7wc?si=XLAHqEapDY9axNon" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            
+              <div id="kinglunar" class="info title" style="display:none">
+                <h2>King Lunar</h2>
+                <p><i>COMM490, Fall 2024</i></p><br>
+                <p>This animation is about my two real-life pets, Lunar and Maybelle. This project was hand drawn by me in Procreate and animated in Adobe Animate. Lunar loves his life as king, until he realizes it was all a dream!</p><br>
+                <iframe width="auto" height="auto" src="https://www.youtube.com/embed/CadMr3BVv9g?si=LOmLzsLW5KDKKruR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+
+              <script>
+                function openCity(evt, cityName) {
+                  var i, x, tablinks;
+                  x = document.getElementsByClassName("title");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("project");
+                  for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" selected", ""); 
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " selected";
+                }
+                </script>
+
+        </div>
+
+    
         <div class="part digital">
             <h2>Digital Media</h2>
             <p>I primarily work with Photoshop and Illustrator.</p>
@@ -67,12 +99,10 @@
                 <img src="../images/mike.png" style="width:100%">
                 <img src="../images/yh2c2gb.png" style="width:100%">
                 <img src="../images/tiles.png" style="width:100%">
-                <img src="../images/maintest.jpg" style="width:100%">
                 <img src="../images/halftone.png" style="width:100%">
               </div>
               <div class="column">
                 <img src="../images/tiles.png" style="width:100%">
-                <img src="../images/maintest.jpg" style="width:100%">
                 <img src="../images/halftone.png" style="width:100%">
                 <img src="../images/mike.png" style="width:100%">
                 <img src="../images/yh2c2gb.png" style="width:100%">
@@ -81,12 +111,10 @@
                 <img src="../images/mike.png" style="width:100%">
                 <img src="../images/yh2c2gb.png" style="width:100%">
                 <img src="../images/tiles.png" style="width:100%">
-                <img src="../images/maintest.jpg" style="width:100%">
                 <img src="../images/halftone.png" style="width:100%">
               </div>
               <div class="column">
                 <img src="../images/tiles.png" style="width:100%">
-                <img src="../images/maintest.jpg" style="width:100%">
                 <img src="../images/halftone.png" style="width:100%">
                 <img src="../images/mike.png" style="width:100%">
                 <img src="../images/yh2c2gb.png" style="width:100%">
@@ -94,30 +122,6 @@
             </div>
 
 
-    <!-- Main container with class content
-    <div class="content">
- 
-        <div class="section" id="first">
-            <div class="container">
-                <img src="../images/tiles.gif" alt="" class="image">
-                <div class="overlay"><h2>Tiles</h2><h3>2024</h3></div>
-              </div>
-        </div>
- 
-        <div class="section">
-            <div class="container">
-                <img src="../images/mike.png" alt="" class="image">
-                <div class="overlay"><h2>Prada</h2><h3>2024</h3></div>
-              </div>
-        </div>
- 
-        <div class="section" id="last">
-            <div class="container">
-                <img src="../images/yh2c2gb.png" alt="" class="image">
-                <div class="overlay"><h2>YH2C2GB</h2><h3>2024</h3></div>
-              </div>
-        </div>
-    </div>-->
 
         </div>
 
