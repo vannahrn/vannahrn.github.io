@@ -1,9 +1,6 @@
 *{
     box-sizing: border-box;
-    margin: 0 auto;
-    overflow:scroll;
-    scroll-behavior: smooth;
-    
+    margin: 0;
 }
 
 body{
@@ -14,6 +11,7 @@ body{
 
 main {
     width:100%;
+    height:auto;
     padding:50px;
     background-color:black;
 }
@@ -47,16 +45,12 @@ caption {
     grid-template-columns: 50% 50%;
     margin:50px;
     gap:50px;
-    overflow:hidden;
 }
   
 .grid-container > div {
     text-align: left;
     width:100%;
-    overflow:hidden;
     word-wrap:break-word;
-
-    
 }
 .grid-container img {
     width:100%;
