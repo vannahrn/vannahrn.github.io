@@ -1,0 +1,66 @@
+const fanfics = [
+    {
+        title: "The Hero's Journey",
+        fandom: "Marvel",
+        tags: "Adventure, Action",
+        rating: "Teen",
+        summary: "An exciting adventure following a young hero.",
+        wordCount: 5000
+    },
+    {
+        title: "Love in the Stars",
+        fandom: "Star Wars",
+        tags: "Romance, Drama",
+        rating: "Mature",
+        summary: "A tale of forbidden love in the galaxy.",
+        wordCount: 7000
+    },
+    {
+        title: "Mystic Worlds",
+        fandom: "Harry Potter",
+        tags: "Fantasy, Mystery",
+        rating: "General",
+        summary: "Exploring hidden secrets of a magical world.",
+        wordCount: 8000
+    },
+    // Add more objects as needed
+];
+
+document.getElementById("search-button").addEventListener("click", function() {
+    const query = document.getElementById("search-input").value.toLowerCase();
+    const results = searchFanfics(query);
+    displayResults(results);
+});
+
+function searchFanfics(query) {
+    return fanfics.filter(fanfic =>
+        fanfic.title.toLowerCase().includes(query) ||
+        fanfic.fandom.toLowerCase().includes(query) ||
+        fanfic.tags.toLowerCase().includes(query) ||
+        fanfic.rating.toLowerCase().includes(query)
+    );
+}
+
+function displayResults(results) {
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = ""; // Clear previous results
+
+    if (results.length === 0) {
+        resultsDiv.innerHTML = "<p>No fanfics found.</p>";
+        return;
+    }
+
+    results.forEach(fanfic => {
+        const result = `
+            <div>
+                <h3>${fanfic.title}</h3>
+                <p><strong>Fandom:</strong> ${fanfic.fandom}</p>
+                <p><strong>Tags:</strong> ${fanfic.tags}</p>
+                <p><strong>Rating:</strong> ${fanfic.rating}</p>
+                <p><strong>Word Count:</strong> ${fanfic.wordCount}</p>
+                <p><strong>Summary:</strong> ${fanfic.summary}</p>
+            </div>
+        `;
+        resultsDiv.innerHTML += result;
+    });
+}
