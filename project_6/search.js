@@ -1,3 +1,5 @@
+//dummy fake fanfics and their metadata
+
 const fanfics = [
     {
         title: "The Hero's Journey",
@@ -26,12 +28,14 @@ const fanfics = [
     // Add more objects as needed
 ];
 
+//when search button is clicked, script reads search input
 document.getElementById("search-button").addEventListener("click", function() {
     const query = document.getElementById("search-input").value.toLowerCase();
     const results = searchFanfics(query);
     displayResults(results);
 });
 
+//converts everything to lowercase for better searching
 function searchFanfics(query) {
     return fanfics.filter(fanfic =>
         fanfic.title.toLowerCase().includes(query) ||
@@ -43,13 +47,16 @@ function searchFanfics(query) {
 
 function displayResults(results) {
     const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = ""; // Clear previous results
+    resultsDiv.innerHTML = ""; // clear previous results
 
+
+    //if no results are found
     if (results.length === 0) {
         resultsDiv.innerHTML = "<p>No fanfics found.</p>";
         return;
     }
 
+    //display results if it is found that metadata matches
     results.forEach(fanfic => {
         const result = `
             <div>
