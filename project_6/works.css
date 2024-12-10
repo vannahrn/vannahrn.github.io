@@ -351,10 +351,15 @@ fieldset {
     transition-duration:  .5s;
   }
 
+.results-section > div {
+    margin-bottom: 15px;
+}
+
 .fanfic {
     border:1px solid gray;
     padding:10px;
     border-radius:5px;
+    margin-bottom:20px;
 }
 
 p {
