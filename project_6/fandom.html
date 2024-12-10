@@ -54,13 +54,12 @@
           
         <div class="item search">
 
-            <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" action="/action_page.php">
-    <div class="autocomplete" style="width:300px;">
-      <input id="myInput" type="text" name="myCountry" placeholder="Country">
-    </div>
-    <input type="submit">
-  </form>
+            <div>
+                <label for="fandomInput"><b>Fandom</b></label>
+                <input type="text" id="fandomInput" placeholder="Start typing a fandom..." autocomplete="off">
+                <div id="fandomSuggestions" class="suggestions"></div>
+            </div>
+            
 
         </div>
       

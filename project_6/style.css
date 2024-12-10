@@ -48,6 +48,7 @@ h1 {
 
 .item3 {
     grid-area: main;
+    width:100%;
     background-color:#EAEAEA;
     padding:30px;
 }
@@ -70,6 +71,7 @@ h1 {
 
 
 .main-content {
+
     display:grid;
     grid-template-columns: 5fr 2fr;
     grid-template-rows: auto;
@@ -77,6 +79,9 @@ h1 {
     gap:30px;
 }
 
+.item {
+    width:100%;
+}
 .welcome {
     background-color:white;
     border-radius:10px;
