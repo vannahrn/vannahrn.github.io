@@ -119,9 +119,7 @@ function displayResults(results) {
         const fanficDiv = document.createElement("div");
         fanficDiv.innerHTML = `
             <h3>${fanfic.title}</h3>
-            <p><b>Author:</b> ${fanfic.author}</p>
-            <p><b>Rating:</b> ${fanfic.rating}</p>
-            <p><b>Language:</b> ${fanfic.language}</p>
+            <p><b>${fanfic.author}</b> | ${fanfic.rating} | ${fanfic.language}</p>
             <p><b>Category:</b> ${fanfic.category.join(", ")}</p>
             <p><b>Status:</b> ${fanfic.status}</p>
             <p><b>Crossovers:</b> ${fanfic.crossover}</p>
