@@ -1,10 +1,10 @@
 async function loadFanficFiles() {
     const filenames = [
-        'fanfic_1.txt', 'fanfic_2.txt', 'fanfic_3.txt', 'fanfic_4.txt', 'fanfic_5.txt',
-        'fanfic_6.txt', 'fanfic_7.txt', 'fanfic_8.txt', 'fanfic_9.txt', 'fanfic_10.txt',
-        'fanfic_11.txt', 'fanfic_12.txt', 'fanfic_13.txt', 'fanfic_14.txt', 'fanfic_15.txt',
-        'fanfic_16.txt', 'fanfic_17.txt', 'fanfic_18.txt', 'fanfic_19.txt', 'fanfic_20.txt',
-        'fanfic_21.txt', 'fanfic_22.txt', 'fanfic_23.txt', 'fanfic_24.txt', 'fanfic_25.txt'
+        'fanfic1.txt', 'fanfic2.txt', 'fanfic3.txt', 'fanfic4.txt', 'fanfic5.txt',
+        'fanfic6.txt', 'fanfic7.txt', 'fanfic8.txt', 'fanfic9.txt', 'fanfic10.txt',
+        'fanfic11.txt', 'fanfic12.txt', 'fanfic13.txt', 'fanfic14.txt', 'fanfic15.txt',
+        'fanfic16.txt', 'fanfic17.txt', 'fanfic18.txt', 'fanfic19.txt', 'fanfic20.txt',
+        'fanfic21.txt', 'fanfic22.txt', 'fanfic23.txt', 'fanfic24.txt', 'fanfic25.txt'
     ];
     
     const fanfics = [];
