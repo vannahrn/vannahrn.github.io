@@ -56,15 +56,15 @@
 
                     <div class="search-section">
                         <div>
-                            <label for="title">Title:</label>
+                            <label for="title"><b>Title</b></label><br>
                             <input type="text" id="title" placeholder="Enter a title">
                         </div>
                         <div>
-                            <label for="author">Author:</label>
-                            <input type="text" id="author" placeholder="Enter a author">
+                            <label for="author"><b>Author</b></label>
+                            <input type="text" id="author" placeholder="Enter a user">
                         </div>
                         <div>
-                            <label for="rating">Rating:</label>
+                            <label for="rating"><b>Rating</b></label>
                             <select id="rating">
                                 <option value="">Any</option>
                                 <option value="General">General</option>
@@ -76,7 +76,7 @@
                 
                 
                         <div>
-                            <label for="language">Language:</label>
+                            <label for="language"><b>Language</b></label>
                             <select id="language">
                                 <option value="">Any</option>
                                 <option value="English">English</option>
@@ -86,9 +86,10 @@
                             </select>
                         </div>
                 
-                
+                    <fieldset>
+                        <legend>Chapters</legend>
+
                         <div>
-                            <label for="category">Category:</label>
                             <div>
                                 <label><input type="checkbox" name="category" value="M/M"> M/M</label>
                                 <label><input type="checkbox" name="category" value="F/F"> F/F</label>
@@ -97,9 +98,10 @@
                                 <label><input type="checkbox" name="category" value="Multi"> Multi</label>
                             </div>
                         </div>
+                    </fieldset>
                 
                         <fieldset>
-                            <legend>Completion Status:</legend>
+                            <legend>Completion Status</legend>
                         <div>
                             <div>
                                 <label><input type="radio" name="completion" value="all" checked> All Works</label>
@@ -110,7 +112,7 @@
                         </fieldset>
                 
                         <fieldset>
-                            <legend>Crossovers:</legend>
+                            <legend>Crossovers</legend>
                         <div>
                             <div>
                                 <label><input type="radio" name="crossover" value="all" checked> All Works</label>
@@ -121,7 +123,7 @@
                         </fieldset>
                 
                         <fieldset>
-                            <legend>Chapters:</legend>
+                            <legend>Chapters</legend>
                         <div>
                             <div>
                                 <label><input type="radio" name="chapters" value="all" checked> All Works</label>
@@ -132,22 +134,22 @@
                         </fieldset>
                 
                         <fieldset>
-                            <legend>Word Count:</legend>
+                            <legend>Word Count</legend>
                             <label>
                                 <input type="radio" name="wordCount" value="all" checked>
                                 All
                             </label>
                             <label>
                                 <input type="radio" name="wordCount" value="blurb">
-                                Blurb (0-1,000 words)
+                                Blurb (0-1k words)
                             </label>
                             <label>
                                 <input type="radio" name="wordCount" value="one shot">
-                                One Shot (1,000-10,000 words)
+                                One Shot (1k-10k words)
                             </label>
                             <label>
                                 <input type="radio" name="wordCount" value="mini series">
-                                Mini Series (10,000-50,000 words)
+                                Mini Series (10k-50k words)
                             </label>
                             <label>
                                 <input type="radio" name="wordCount" value="full series">
@@ -155,49 +157,60 @@
                             </label>
                         </fieldset>
                 
+                        <fieldset>
+                            <legend>Warnings</legend>
+                            <div>
+                                <label><input type="checkbox" name="warnings" value="creator chose not to archive warnings"> Creator Chose Not to Archive Warnings</label><br>
+                                <label><input type="checkbox" name="warnings" value="no archive warnings apply"> No Archive Warnings Apply</label><br>
+                                <label><input type="checkbox" name="warnings" value="graphic depictions of violence"> Graphic Depictions of Violence</label><br>
+                                <label><input type="checkbox" name="warnings" value="major character death"> Major Character Death</label><br>
+                                <label><input type="checkbox" name="warnings" value="drug/alcohol use"> Drug/Alcohol Use</label><br>
+                                <label><input type="checkbox" name="warnings" value="dead dove: do not eat"> Dead Dove: Do Not Eat</label>
+                            </div>
+                        </fieldset>
+
                         <div>
-                            <label for="fandom">Fandoms:</label>
+                            <label for="fandom"><b>Fandoms</b>
+                                <div class="tooltip"><img src="https://img.icons8.com/?size=100&id=59807&format=png&color=808080">
+                                    <span class="tooltiptext">Multiple entries must be separated by commas. <br> <i>ex. Harry Potter, Star Wars, Doctor Who ...</i></span>
+                                    </div>
+                                </label>
                             <input type="text" id="fandom" placeholder="Enter a fandom">
                         </div>
                 
                         <div>
-                            <label for="character">Characters:</label>
+                            <label for="character"><b>Characters</b>
+                                <div class="tooltip"><img src="https://img.icons8.com/?size=100&id=59807&format=png&color=808080">
+                                    <span class="tooltiptext">Multiple entries must be separated by commas. Characters are usually logged with their first and last name. Some characters may be logged as two commonly referred to names. <br> <i>ex. D.va | Hana Song, Din Djarin  ...</i></span>
+                                    </div></label>
                             <input type="text" id="character" placeholder="Enter a character">
                         </div>
                 
                         <div>
-                            <label for="Relationships">Relationships:</label>
+                            <label for="Relationships"><b>Relationships</b></label>
+                            <div class="tooltip"><img src="https://img.icons8.com/?size=100&id=59807&format=png&color=808080">
+                                <span class="tooltiptext">Multiple entries must be separated by commas. "Ship names" are not valid. Follow the name/name format.<br> <i>ex. Ada Wong/Leon Kennedy ...</i></span>
+                                </div>
                             <input type="text" id="ship" placeholder="Enter a relationship">
                         </div>
                 
-                        <div>
-                            <label for="fandom">Fandoms:</label>
-                            <input type="text" id="fandom" placeholder="Enter a fandom">
-                        </div>
-                
-                
                     <div>
-                        <label for="tags">Tags (comma-separated):</label>
-                        <input type="text" id="tags" placeholder="Search by tags">
+                        <label for="tags"><b>Tags</b>
+                            <div class="tooltip"><img src="https://img.icons8.com/?size=100&id=59807&format=png&color=808080">
+                            <span class="tooltiptext">Multiple entries must be separated by commas. <br> <i>ex. angst, slowburn, alternate universe ...</i></span>
+                            </div>
+                        </label>
+                        <input type="text" id="tags" placeholder="Enter a tag">
                     </div>
                 
                         <div>
                             <button id="searchButton">Search</button>
                         </div>
                 
-                        <div>
-                            <h3>Warnings</h3>
-                            <label><input type="checkbox" name="warnings" value="creator chose not to archive warnings"> Creator Chose Not to Archive Warnings</label><br>
-                            <label><input type="checkbox" name="warnings" value="graphic depictions of violence"> Graphic Depictions of Violence</label><br>
-                            <label><input type="checkbox" name="warnings" value="major character death"> Major Character Death</label><br>
-                            <label><input type="checkbox" name="warnings" value="no archive warnings apply"> No Archive Warnings Apply</label><br>
-                            <label><input type="checkbox" name="warnings" value="drug/alcohol use"> Drug/Alcohol Use</label><br>
-                            <label><input type="checkbox" name="warnings" value="dead dove: do not eat"> Dead Dove: Do Not Eat</label>
-                        </div>
-                
                     </div>
 
                 </div>
+
                 <div class="item results">
                     <div class="results-section">
                         <h2>Search Results</h2>

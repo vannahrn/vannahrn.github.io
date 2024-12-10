@@ -241,9 +241,115 @@ a {
     background-color:#700000;
 }
 
+/* query styling */
+
+label {
+    font-size:15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: #9a0101;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition-duration:.5s;
+}
+
+button:hover {
+    background-color: #700000;
+    letter-spacing:2px;
+    transition-duration:.5s;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+}
+
+legend {
+    font-size:20px;
+}
+
+.search-section > div {
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: 1px solid gray;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    font-weight:bold;
+    font-size: 15px;
+}
+
+
+
 fieldset {
     border-radius:5px;
 }
+
+/*help tooltip from w3*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-size:12px;
+}
+  
+.tooltip img {
+    height:12px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #eaeaea;
+    border:1px solid gray;
+    color:black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition-duration: .5s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition-duration:  .5s;
+  }
 
 @media (max-width: 600px) {
 }
