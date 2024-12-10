@@ -117,20 +117,26 @@ function displayResults(results) {
 
     results.forEach(fanfic => {
         const fanficDiv = document.createElement("div");
+        fanficDiv.classList.add("result-item"); // Add a class for styling
+
+        // Add the formatted content
         fanficDiv.innerHTML = `
-            <h3>${fanfic.title}</h3>
-            <p><b>Author:</b> ${fanfic.author}</p>
-            <p><b>Rating:</b> ${fanfic.rating}</p>
-            <p><b>Language:</b> ${fanfic.language}</p>
-            <p><b>Category:</b> ${fanfic.category.join(", ")}</p>
-            <p><b>Status:</b> ${fanfic.status}</p>
-            <p><b>Crossovers:</b> ${fanfic.crossover}</p>
-            <p><b>Chapters:</b> ${fanfic.chapters}</p>
-            <p><b>Word Count:</b> ${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</p>
-            <p><b>Fandom:</b> ${fanfic.fandom}</p>
-            <p><b>Warnings:</b> ${fanfic.warnings.join(", ")}</p>
-            <p><b>Tags:</b> ${fanfic.tags.join(", ")}</p>
+            <h3 class="result-title">${fanfic.title}</h3>
+            <div class="result-meta">
+                <span class="meta-author">by ${fanfic.author}</span>
+                <span class="meta-rating">Rating: ${fanfic.rating}</span>
+                <span class="meta-fandom">Fandom: ${fanfic.fandom}</span>
+                <span class="meta-wordcount">${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</span>
+            </div>
+            <div class="result-summary">
+                <p><b>Status:</b> ${fanfic.status}</p>
+                <p><b>Crossovers:</b> ${fanfic.crossover}</p>
+                <p><b>Chapters:</b> ${fanfic.chapters}</p>
+                <p><b>Warnings:</b> ${fanfic.warnings.join(", ")}</p>
+                <p><b>Tags:</b> ${fanfic.tags.join(", ")}</p>
+            </div>
         `;
         resultsDiv.appendChild(fanficDiv);
     });
 }
+

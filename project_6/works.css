@@ -260,7 +260,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-button {
+#search {
     background-color: #9a0101;
     color: white;
     border: none;
@@ -273,7 +273,7 @@ button {
     transition-duration:.5s;
 }
 
-button:hover {
+#search:hover {
     background-color: #700000;
     letter-spacing:2px;
     transition-duration:.5s;
@@ -331,10 +331,10 @@ fieldset {
     visibility: hidden;
     width: 400px;
     background-color: #eaeaea;
-    border:1px solid gray;
+    border:1px solid 
     color:black;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
@@ -350,6 +350,49 @@ fieldset {
     opacity: 1;
     transition-duration:  .5s;
   }
+
+/* Container for each result */
+.result-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.result-title {
+    font-size: 1.8em;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Metadata (inline format) */
+.result-meta {
+    font-size: 0.9em;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Summary formatting */
+.result-summary {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Optional: Add some hover effect for interactivity */
+.result-item:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+}
+
 
 @media (max-width: 600px) {
 }
