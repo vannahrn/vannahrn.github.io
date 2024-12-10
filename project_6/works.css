@@ -20,11 +20,6 @@
     background-color:white;
 }
 
-h1 {
-    font-size:30px;
-    font-weight:normal;
-}
-
 .item1 a {
     color:#9a0101;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -71,30 +66,19 @@ h1 {
 
 .main-content {
     display:grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     width:100%;
     gap:30px;
 }
 
-.welcome {
+.search, .results {
     background-color:white;
-    border-radius:10px;
-    padding:25px;
     border:1px solid gray;
-    grid-row-start: 1;
-    grid-row-end:2;
-    grid-column-start:0;
-    grid-column-start:1;
+    border-radius: 5px;
+    padding:20px;
 }
 
-.info {
-    background-color:#EAEAEA;
-    padding:25px;
-    border-radius:10px;
-    border:1px solid gray;
-    
-}
 
 
 .connect {
@@ -149,6 +133,15 @@ h1 {
     background-color:#700000;
     transition-duration:.5s;
 
+}
+
+h1 {
+    font-size:30px;
+    font-weight:normal;
+}
+sup {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:12px;
 }
 
 h3 {
@@ -247,34 +240,11 @@ a {
 .active {
     background-color:#700000;
 }
-sup {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:12px;
+
+fieldset {
+    border-radius:5px;
 }
 
-
 @media (max-width: 600px) {
-    .main-content {
-        grid-template-columns: auto;
-    }
-     .welcome {
-        grid-row-start: 1;
-        grid-row-end:2;
-        grid-column-start:0;
-        grid-column-start:1;
-     }  
-     .connect {
-        grid-row-start: 2;
-        grid-row-end:3;
-        grid-column-start:0;
-        grid-column-start:1;
-     } 
-     .twit, .tumblr {
-        margin:10px 10px;
-        font-size:10px;
-     }
-     .twit img, .tumblr img {
-        height:8px;
-     }
-    }
+}
   

@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8" lang="en" dir = "ltr" >
-    <meta name="description" content="Personal Site: Project 5">
+    <meta name="description" content="Personal Site: Project 6">
     <meta name="author" content="Savannah Nelson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../project_6/style.css">
+    <link rel="icon" type="image/x-icon" href="./ao3logo.png">
     <title>Archive of our Own</title>
 </head>
 <body>
-<header>
-    <img src="ao3logo.png" alt="Archive of our Own logo in red"> <h1>Archive of our Own</h1>
 
-</header>
-<main>
-     <!--
-    <div class="sidebar">
+<div class="grid-container">
 
-        <div class="dropdown">
-            <button class="dropdown-button">Fandoms <div class="arrow"><img src="https://img.icons8.com/?size=100&id=7849&format=png&color=FFFFFF"></div></button>
-            <div class="dropdown-content">
-                <div class="dropdown-grid">
-              <a href="#link1">All Fandoms</a>
-              <a href="#link2">Anime & Manga</a>
-              <a href="#link3">Books & Literature</a>
-              <a href="#link2">Cartoons & Comics & Graphic Novels</a>
-              <a href="#link3">Celebrities & Real People</a>
-              <a href="#link2">Movies</a>
-              <a href="#link3">Music & Bands</a>
-              <a href="#link2">Other Media</a>
-              <a href="#link3">Theater</a>
-              <a href="#link2">TV Shows</a>
-              <a href="#link3">Video Games</a>
-              <a href="#link2">Uncategorized Fandoms</a>
+  <div class="item1">
+  <h1><a href="./test.html"><img src="ao3logo.png" alt="Archive of our Own logo in red"> &nbsp; Archive of our Own<sup><i>beta</i></sup></a></h1>
+  </div>
+
+  <div class="item2">
+    <button class="dropdown-btn">Search <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff"></button>
+    <div class="dropdown-container">
+      <div class="dropdown-content"><a href="../project_6/works.html">Search works</a></div>
+      <div class="dropdown-content"><a href="#">Search fandoms</a></div>
+      <div class="dropdown-content"><a href="#">Search users</a></div>
+    </div>
+    <button class="navbutton">About <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+    <button class="navbutton">News <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>
+
+  </div>
+  <div class="item3">
+    
+    <div class="main-content">
+
+        <div class="item welcome">
+
+            <h3>A fan-created, fan-run, nonprofit, noncommercial archive for transformative fanworks, like fanfiction, fanart, fan videos, and podfic</h3><br>
+            <center>more than <b>68,370</b> fandoms | <b>7,690,000</b> users | <b>13,940,000</b> works</center><br>
+            <center>The Archive of Our Own is a project of the <a href="https://www.transformativeworks.org/">Organization for Transformative Works</a>.</center><br>
+    
+            <div class="info">
+                <h4>With an AO3 account, you can:</h4><br>
+                <ul>
+                    <li>Share your own fanworks</li>
+                    <li>Get notified when your favorite works, series, or users update</li>
+                    <li>Participate in challenges</li>
+                    <li>Keep track of works you've visited and works you want to check out later</li>
+                </ul><br>
+                <p>You can join by getting an invitation from our automated invite queue. All fans and fanworks are welcome!</p>
+                <br>
+                <center><button class="invite">Get invited!</button></center>
             </div>
-            </div>
-        </div>
 
-        <button class="sidebutton">Search</button>
-        <button class="sidebutton">Browse</button>
-        <button class="sidebutton">About</button>
+    </div>
+        
+    <div class="item connect">
+      <h5>Follow Us</h5>
+        <p>Follow the Archive on X <i>(formally Twitter)</i> or Tumblr for status updates</p>
+        <br>
+        <center>
+        <button class="twit"><a href="https://x.com/ao3_status">@AO3_status</a></button>
+        <button class="tumblr"><a href="https://ao3org.tumblr.com/">@AO3org</a></button>
+        </center>
+        <br>
+      <h5>Projects</h5>
+        <p>Don't forget to check out the Organization for Transformative Works' news outlets for updates on our other projects!</p>
 
-    </div>-->
-
-    <div class="sidebar">
-        Sidebar
     </div>
 
-    <div class="content">
-    Hello
     </div>
-    
-    
+
+  </div> 
+  
 
 
-</main>
-<footer>
-
+  <div class="item4">
     <p>Re-imagined by Savannah Nelson © 2024</p>
+  </div>
+</div>
 
-    <div class="footer-container">
-        <div class="footer-item">
-            <b>About the Archive</b><br>
-            <a href="">Site Map</a><br>
-            <a href="">Diversity Statement</a><br>
-            <a href="">Terms of Service</a><br>
-            <a href="">DMCA Policy</a>
-        </div>
-
-        <div class="footer-item">
-            <b>Contact Us</b><br>
-            <a href="">Policy Questions & Abuse Reports</a><br>
-            <a href="">Techincal Support & Feedback</a>
-        </div>
-
-        <div class="footer-item" style="text-align:right;">
-            <b>Development</b><br>
-            <a href="">otwarchive v.09.380.3</a><br>
-            <a href="">Known Issues</a><br>
-            <a href="">GPL-2.0-or-later by the OTW</a>
-        </div> 
-
-      </div>
-</footer>
 </body>
+</html>

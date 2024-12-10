@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete for Multiple Categories</title>
+    <style>
+        .suggestions-container {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .suggestion {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .suggestion:hover {
+            background: #f0f0f0;
+        }
+
+        .autocomplete-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="autocomplete-container">
+        <label for="fandomInput">Fandoms:</label>
+        <input type="text" id="fandomInput" placeholder="Start typing fandoms...">
+        <div id="fandomSuggestions" class="suggestions-container"></div>
+    </div>
+
+    <div class="autocomplete-container">
+        <label for="tagsInput">Tags:</label>
+        <input type="text" id="tagsInput" placeholder="Start typing tags...">
+        <div id="tagsSuggestions" class="suggestions-container"></div>
+    </div>
+
+    <div class="autocomplete-container">
+        <label for="relationshipsInput">Relationships:</label>
+        <input type="text" id="relationshipsInput" placeholder="Start typing relationships...">
+        <div id="relationshipsSuggestions" class="suggestions-container"></div>
+    </div>
+
+    <div class="autocomplete-container">
+        <label for="charactersInput">Characters:</label>
+        <input type="text" id="charactersInput" placeholder="Start typing characters...">
+        <div id="charactersSuggestions" class="suggestions-container"></div>
+    </div>
+
+    <script>
+        const fandoms = [
+            "Star Wars", "Harry Potter", "Jujutsu Kaisen", "Marvel", "DC Comics",
+            "The Lord of the Rings", "Stranger Things", "The Witcher", "Naruto", "One Piece"
+        ];
+        const tags = [
+            "Angst", "Fluff", "Hurt/Comfort", "Romance", "Adventure", "Family", 
+            "Friendship", "Alternate Universe", "Canon Compliant", "LGBTQ+"
+        ];
+        const relationships = [
+            "Hermione/Draco", "Megumi/Yuji", "Leia/Luke", "Tony/Pepper", "Batman/Joker",
+            "Harry/Ginny", "Ron/Hermione", "Steve/Peggy", "Naruto/Hinata", "Luffy/Nami"
+        ];
+        const characters = [
+            "Yuji Itadori", "Leia Organa", "Harry Potter", "Anakin Skywalker", 
+            "Wanda Maximoff", "Hermione Granger", "Tony Stark", "Naruto Uzumaki", 
+            "Frodo Baggins", "Geralt of Rivia"
+        ];
+
+        function filterSuggestions(input, suggestionsArray, suggestionsContainer) {
+            const query = input.value.trim().split(",").pop().trim().toLowerCase();
+            suggestionsContainer.innerHTML = ""; 
+
+            if (query === "") return;
+
+            const filteredItems = suggestionsArray.filter(item => item.toLowerCase().startsWith(query));
+
+            filteredItems.forEach(item => {
+                const div = document.createElement("div");
+                div.classList.add("suggestion");
+                div.textContent = item;
+                suggestionsContainer.appendChild(div);
+            });
+        }
+
+        function addSuggestionEventListeners(input, suggestionsContainer) {
+            suggestionsContainer.addEventListener("click", (event) => {
+                if (event.target && event.target.matches("div")) {
+                    const selectedItem = event.target.textContent.trim();
+
+                    let entries = input.value.split(",").map(entry => entry.trim());
+                    entries[entries.length - 1] = selectedItem;
+
+                    input.value = entries.join(", ") + ", ";
+                    suggestionsContainer.innerHTML = "";
+                    input.focus();
+                }
+            });
+        }
+
+        function setupAutocomplete(inputId, suggestionsContainerId, suggestionsArray) {
+            const input = document.getElementById(inputId);
+            const suggestionsContainer = document.getElementById(suggestionsContainerId);
+
+            input.addEventListener("input", () => {
+                filterSuggestions(input, suggestionsArray, suggestionsContainer);
+            });
+
+            addSuggestionEventListeners(input, suggestionsContainer);
+
+            document.addEventListener("click", (event) => {
+                if (!suggestionsContainer.contains(event.target) && event.target !== input) {
+                    suggestionsContainer.innerHTML = "";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setupAutocomplete("fandomInput", "fandomSuggestions", fandoms);
+            setupAutocomplete("tagsInput", "tagsSuggestions", tags);
+            setupAutocomplete("relationshipsInput", "relationshipsSuggestions", relationships);
+            setupAutocomplete("charactersInput", "charactersSuggestions", characters);
+        });
+    </script>
+</body>
+</html>
