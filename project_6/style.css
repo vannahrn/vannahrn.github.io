@@ -70,6 +70,24 @@ h1 {
     'footer footer footer footer footer footer footer footer';
 }
 
+#search {
+    background-color: #9a0101;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition-duration:.5s;
+}
+
+#search:hover {
+    background-color: #700000;
+    letter-spacing:2px;
+    transition-duration:.5s;
+}
 
 .main-content {
 
@@ -221,12 +239,6 @@ a {
 .dropdown-btn:hover {
     background-color:#700000;
     transition-duration:.5s;
-}
-
-
-.dropdown-container {
-    display: none;
-    background-color: #262626;
 }
 
 .dropdown-content {

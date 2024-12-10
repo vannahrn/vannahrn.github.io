@@ -57,7 +57,6 @@ function parseMetadata(fileContent) {
     return metadata;
 }
 
-// Search button functionality
 document.getElementById("searchButton").addEventListener("click", async () => {
     const fanfics = await loadFanficFiles();
 

@@ -67,8 +67,3 @@ document.addEventListener("DOMContentLoaded", () => {
 const searchButton = document.createElement("button");
 searchButton.textContent = "Search";
 searchButton.id = "searchButton";
-document.body.appendChild(searchButton);
-
-searchButton.addEventListener("click", () => {
-    alert("search clikcked");
-});

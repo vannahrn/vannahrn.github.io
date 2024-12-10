@@ -25,10 +25,11 @@
           <button class="dropdown-btn">Search <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff"></button>
           <div class="dropdown-container">
             <div class="dropdown-content"><a href="../project_6/works.html">Search works</a></div>
-            <div class="dropdown-content"><a href="#">Search fandoms</a></div>
+            <div class="dropdown-content"><a href="../project_6/fandom.html">Search fandoms</a></div>
             <div class="dropdown-content"><a href="#">Search users</a></div>
           </div>
-          <button class="navbutton">About <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+          
+          <button class="navbutton"><a href="../project_6/about.html">About <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></a></button>
           <button class="navbutton">News <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
       
         <script>
@@ -50,15 +51,17 @@
         </div>
 
         <!--main content-->
-        <div class="item3">
-          
+        <div class="item3" style="width:88vw;">
+        
         <div class="item search">
-        <h3>Fandom Search</h3>
+        <div style="margin-bottom:15px;">
+            <h2>Fandom Search</h2>
+        </div>
             <div>
-                <label for="fandomInput"><b>Fandom</b></label>
+                <label for="fandomInput">Search archived fandom works.</label>
                 <input type="text" id="fandomInput" placeholder="Start typing a fandom..." autocomplete="off">
                 <div id="fandomSuggestions" class="suggestions"></div>
-                <button class="search-button">Search</button>
+                <div style="text-align:right"><button id="search">Search</button></div>
             </div>
 
             <script src="fandomsearch.js"></script>
