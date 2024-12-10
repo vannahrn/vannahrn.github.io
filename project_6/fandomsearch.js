@@ -1,6 +1,15 @@
 const fandoms = [
     "Star Wars", "Harry Potter", "Jujutsu Kaisen", "Marvel", "DC Comics",
-    "The Lord of the Rings", "Stranger Things", "The Witcher", "Naruto", "One Piece"
+    "The Lord of the Rings", "Stranger Things", "The Witcher", "Naruto", "One Piece",
+    "Attack on Titan", "My Hero Academia", "Game of Thrones", "The Mandalorian", "Doctor Who",
+    "Supernatural", "Sherlock", "Breaking Bad", "The Umbrella Academy", "Demon Slayer",
+    "Fullmetal Alchemist", "Avatar: The Last Airbender", "The Legend of Korra", "Final Fantasy", "Kingdom Hearts",
+    "The Hunger Games", "Percy Jackson", "Twilight", "The Walking Dead", "Shadow and Bone",
+    "Cyberpunk 2077", "Resident Evil", "The Last of Us", "Elden Ring", "Undertale",
+    "Overwatch", "Hades", "Stardew Valley", "Animal Crossing", "League of Legends",
+    "The Sims", "Dragon Age", "Mass Effect", "Skyrim", "Persona 5",
+    "Fate/Stay Night", "Chainsaw Man", "Tokyo Revengers", "Bleach", "Hunter x Hunter"
+
 ];
 
 function filterSuggestions(input, suggestionsArray, suggestionsContainer) {
@@ -53,4 +62,13 @@ function setupAutocomplete(inputId, suggestionsContainerId, suggestionsArray) {
 
 document.addEventListener("DOMContentLoaded", () => {
     setupAutocomplete("fandomInput", "fandomSuggestions", fandoms);
+});
+
+const searchButton = document.createElement("button");
+searchButton.textContent = "Search";
+searchButton.id = "searchButton";
+document.body.appendChild(searchButton);
+
+searchButton.addEventListener("click", () => {
+    alert("search clikcked");
 });
