@@ -321,6 +321,7 @@ fieldset {
     position: relative;
     display: inline-block;
     font-size:12px;
+    font-weight:normal;
 }
   
 .tooltip img {
@@ -335,7 +336,7 @@ fieldset {
     color:black;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px;
     position: absolute;
     z-index: 1;
     bottom: 100%;

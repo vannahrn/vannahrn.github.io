@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="en" dir = "ltr" >
+    <meta name="description" content="Personal Site: Project 6">
+    <meta name="author" content="Savannah Nelson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../project_6/works.css">
+    <link rel="stylesheet" type="text/css" href="../project_6/fandom.css">
+    <link rel="icon" type="image/x-icon" href="./ao3logo.png">
+    <title>Search Works | Archive of our Own</title>
+</head>
+<body>
+
+
+    <div class="grid-container">
+
+        <!--header-->
+        <div class="item1">
+        <h1><a href="./test.html"><img src="ao3logo.png" alt="Archive of our Own logo in red"> &nbsp; Archive of our Own<sup><i>beta</i></sup></a></h1>
+        </div>
+      
+        <!--side menu-->
+        <div class="item2">
+          <button class="dropdown-btn">Search <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff"></button>
+          <div class="dropdown-container">
+            <div class="dropdown-content"><a href="../project_6/works.html">Search works</a></div>
+            <div class="dropdown-content"><a href="#">Search fandoms</a></div>
+            <div class="dropdown-content"><a href="#">Search users</a></div>
+          </div>
+          <button class="navbutton">About <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+          <button class="navbutton">News <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+      
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                  dropdownContent.style.display = "none";
+                } else {
+                  dropdownContent.style.display = "block";
+                }
+              });
+            }
+        </script>
+        </div>
+
+        <!--main content-->
+        <div class="item3">
+          
+        <div class="item search">
+
+            <!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+    <div class="autocomplete" style="width:300px;">
+      <input id="myInput" type="text" name="myCountry" placeholder="Country">
+    </div>
+    <input type="submit">
+  </form>
+
+        </div>
+      
+        </div>
+      
+    <!--end of page layout container-->
+    </div> 
+        
+      
+<!--footer-->
+<div class="item4">
+<p>Re-imagined by Savannah Nelson © 2024</p>
+</div>
+
+</body>
+</html>
