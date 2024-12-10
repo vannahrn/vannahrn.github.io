@@ -63,6 +63,7 @@ h1 {
 
 .grid-container {
   display: grid;
+  width:100%;
   grid-template-areas:
     'header header header header header header header header'
     'menu menu main main main main main main'
@@ -81,6 +82,7 @@ h1 {
 
 .item {
     width:100%;
+
 }
 .welcome {
     background-color:white;
