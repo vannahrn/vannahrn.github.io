@@ -112,18 +112,12 @@ function displayResults(results) {
     results.forEach(fanfic => {
         const fanficDiv = document.createElement("div");
         fanficDiv.classList.add("fanfic");
-        
+
         fanficDiv.innerHTML = `
             <h3>${fanfic.title}</h3>
             <p><b>${fanfic.author}</b> | ${fanfic.rating} | ${fanfic.language}</p>
-            <p><b>Category:</b> ${fanfic.category.join(", ")}</p>
-            <p><b>Status:</b> ${fanfic.status}</p>
-            <p><b>Crossovers:</b> ${fanfic.crossover}</p>
-            <p><b>Chapters:</b> ${fanfic.chapters}</p>
-            <p><b>Word Count:</b> ${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</p>
-            <p><b>Fandom:</b> ${fanfic.fandom}</p>
-            <p><b>Warnings:</b> ${fanfic.warnings.join(", ")}</p>
-            <p><b>Tags:</b> ${fanfic.tags.join(", ")}</p>
+            <p><b>Fandom:</b> ${fanfic.fandom} | ${fanfic.category.join(", ")} | ${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</p>
+            <p><b>${fanfic.warnings.join(", ")}</b> &mdash <i>${fanfic.tags.join(", ")}<i> </p>
         `;
         resultsDiv.appendChild(fanficDiv);
     });
