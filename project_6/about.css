@@ -92,7 +92,7 @@ h1 {
 .main-content {
 
     display:grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     width:100%;
     gap:30px;

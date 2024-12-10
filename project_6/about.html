@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8" lang="en" dir = "ltr" >
+    <meta name="description" content="Personal Site: Project 6">
+    <meta name="author" content="Savannah Nelson">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project_6/about.css">
+    <link rel="icon" type="image/x-icon" href="./ao3logo.png">
+    <title>Archive of our Own</title>
+</head>
+<body>
+
+<div class="grid-container">
+
+  <div class="item1">
+  <h1><a href="../project_6/index.html"><img src="ao3logo.png" alt="Archive of our Own logo in red"> &nbsp; Archive of our Own<sup><i>beta</i></sup></a></h1>
+  </div>
+
+  <div class="item2">
+    <button class="dropdown-btn">Search <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff"></button>
+    <div class="dropdown-container">
+      <div class="dropdown-content"><a href="../project_6/works.html">Search works</a></div>
+      <div class="dropdown-content"><a href="../project_6/fandom.html">Search fandoms</a></div>
+      <div class="dropdown-content"><a href="#">Search users</a></div>
+    </div>
+    
+    <button class="navbutton"><a href="../project_6/about.html">About <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></a></button>
+    <button class="navbutton">News <img src="https://img.icons8.com/?size=100&id=85789&format=png&color=ffffff"></button>
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>
+
+  </div>
+  <div class="item3">
+    
+    <div class="main-content">
+
+        <div class="item welcome">
+        <h5>About Us</h5>
+        <p>The Organization for Transformative Works (OTW) is a nonprofit organization, established by fans in 2007,
+            to serve the interests of fans by providing access to and preserving the history of fanworks and fan culture
+            in its myriad forms. We believe that fanworks are transformative and that transformative works are legitimate.</p><br>
+
+        <p>We are proactive and innovative in protecting and defending our work from commercial exploitation and legal challenge.
+            We preserve our fannish economy, values, and creative expression by protecting and nurturing our fellow fans, our work,
+            our commentary, our history, and our identity while providing the broadest possible access to fannish activity for all fans.</p>
+            <br>
+        <p>The Archive of Our Own offers a noncommercial and nonprofit central hosting place for fanworks using open-source archiving
+            software. We welcome contributions to our GitHub repository, and a list of open tasks is available on our Jira project.</p>
+            <br>
+        <p>Our other major projects include:
+            <ul>
+                <li>Fanlore, a fandom wiki devoted to preserving the history of transformative fanworks and the fandoms
+                    from which they have arisen.</li>
+                <li>Legal Advocacy committed to protecting and defending fanworks from commercial exploitation and legal challenge.</li>
+                <li>Open Doors, which offers shelter to at-risk fannish projects.</li>
+                <li>Transformative Works and Cultures, a peer-reviewed academic journal that seeks to promote scholarship
+                    on fanworks and practices.</li>
+            </ul><br>
+            </p>  
+            <p>You can find out more about the OTW and its projects at its website, transformativeworks.org, and learn about how your
+                financial support is vital to the continuation and expansion of the OTW's work on its FAQ page. If you have a media
+                or research question, please contact the Communications team.</p>
+            
+
+        </div>
+
+    
+    </div>
+
+    </div>
+
+  </div> 
+  
+
+
+  <div class="item4">
+    <p>Re-imagined by Savannah Nelson © 2024</p>
+  </div>
+</div>
+
+</body>
+</html>
