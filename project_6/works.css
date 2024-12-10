@@ -360,7 +360,14 @@ fieldset {
     padding:10px;
     border-radius:5px;
     margin-bottom:20px;
+    transition-duration:.5s;
 }
+
+.fanfic:hover {
+    background-color:#EAEAEA;
+    transition-duration:.5s;
+}
+
 
 p {
     font-size:15px;
