@@ -1,12 +1,11 @@
 async function loadFanficFiles() {
-    const filenames = ['fanfic1.txt', 'fanfic2.txt', 'fanfic3.txt', 'fanfic4.txt']; // List of .txt files
+    const filenames = ['fanfic1.txt', 'fanfic2.txt', 'fanfic3.txt', 'fanfic4.txt'];
     const fanfics = [];
 
     for (const filename of filenames) {
         const response = await fetch(`fanfics/${filename}`);
         const text = await response.text();
 
-        // Parse the metadata and content of the fanfic
         const fanfic = parseMetadata(text);
         fanfics.push(fanfic);
     }
@@ -25,7 +24,6 @@ function parseMetadata(fileContent) {
         }
     });
 
-    // Converts relationships, tags, and warnings into arrays
     if (metadata.category) {
         metadata.category = metadata.category.split(",").map(r => r.trim());
     }
@@ -36,7 +34,6 @@ function parseMetadata(fileContent) {
         metadata.warnings = metadata.warnings.split(",").map(warning => warning.trim().toLowerCase());
     }
 
-    // Convert word count to size categories
     if (metadata['word count']) {
         const wordCount = parseInt(metadata['word count'], 10);
         if (wordCount <= 1000) {
@@ -55,7 +52,7 @@ function parseMetadata(fileContent) {
 
 // Search button functionality
 document.getElementById("searchButton").addEventListener("click", async () => {
-    const fanfics = await loadFanficFiles(); // Load in fanfic data from .txt files
+    const fanfics = await loadFanficFiles();
 
     const title = document.getElementById("title").value.toLowerCase();
     const author = document.getElementById("author").value.toLowerCase();
@@ -63,28 +60,25 @@ document.getElementById("searchButton").addEventListener("click", async () => {
     const language = document.getElementById("language").value;
     const category = Array.from(document.querySelectorAll("input[name='category']:checked"))
                                .map(checkbox => checkbox.value);
-    const completion = document.querySelector("input[name='completion']:checked").value; // Get the selected radio value
-    const crossover = document.querySelector("input[name='crossover']:checked").value; // Get the selected radio value
-    const chapters = document.querySelector("input[name='chapters']:checked").value; // Get the selected radio value
-    const wordCountFilter = document.querySelector("input[name='wordCount']:checked").value; // Get word count category
+    const completion = document.querySelector("input[name='completion']:checked").value; 
+    const crossover = document.querySelector("input[name='crossover']:checked").value; 
+    const chapters = document.querySelector("input[name='chapters']:checked").value; 
+    const wordCountFilter = document.querySelector("input[name='wordCount']:checked").value;
     const warnings = Array.from(document.querySelectorAll("input[name='warnings']:checked"))
-                               .map(checkbox => checkbox.value.toLowerCase()); // Get selected warnings
+                               .map(checkbox => checkbox.value.toLowerCase());
     const fandom = document.getElementById("fandom").value.toLowerCase();
-    const tagsInput = document.getElementById("tags").value.toLowerCase(); // Get tags input
-    const tags = tagsInput ? tagsInput.split(",").map(tag => tag.trim()) : []; // Convert to array
+    const tagsInput = document.getElementById("tags").value.toLowerCase();
+    const tags = tagsInput ? tagsInput.split(",").map(tag => tag.trim()) : []; 
 
     const results = fanfics.filter(fanfic => {
         let matchesWordCount = true;
 
-        // Check word count category
         if (wordCountFilter !== "all") {
             matchesWordCount = fanfic.size.toLowerCase() === wordCountFilter;
         }
 
-        // Check warnings
         const matchesWarnings = warnings.length === 0 || warnings.every(warning => fanfic.warnings.includes(warning));
 
-        // Check tags
         const matchesTags = tags.length === 0 || tags.every(tag => fanfic.tags.includes(tag));
 
         return (
@@ -96,9 +90,9 @@ document.getElementById("searchButton").addEventListener("click", async () => {
             (completion === "all" || fanfic.status.toLowerCase() === completion) &&
             (crossover === "all" || fanfic.crossover.toLowerCase() === crossover) &&
             (chapters === "all" || fanfic.chapters.toLowerCase() === chapters) &&
-            matchesWordCount && // Include word count match
-            matchesWarnings && // Include warnings match
-            matchesTags && // Include tags match
+            matchesWordCount && 
+            matchesWarnings && 
+            matchesTags &&
             (!fandom || fanfic.fandom.toLowerCase().includes(fandom))
         );
     });
@@ -108,7 +102,7 @@ document.getElementById("searchButton").addEventListener("click", async () => {
 
 function displayResults(results) {
     const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = ""; // Clear previous results
+    resultsDiv.innerHTML = "";
 
     if (results.length === 0) {
         resultsDiv.textContent = "No results found.";
@@ -117,6 +111,8 @@ function displayResults(results) {
 
     results.forEach(fanfic => {
         const fanficDiv = document.createElement("div");
+        fanficDiv.classList.add("fanfic");
+        
         fanficDiv.innerHTML = `
             <h3>${fanfic.title}</h3>
             <p><b>${fanfic.author}</b> | ${fanfic.rating} | ${fanfic.language}</p>
