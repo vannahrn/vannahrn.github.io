@@ -116,8 +116,8 @@ function displayResults(results) {
         fanficDiv.innerHTML = `
             <h3>${fanfic.title}</h3>
             <p><b>${fanfic.author}</b> | ${fanfic.rating} | ${fanfic.language}</p>
-            <p><b>Fandom:</b> ${fanfic.fandom} | ${fanfic.category.join(", ")} | ${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</p>
-            <p><b>${fanfic.warnings.join(", ")}</b> &mdash <i>${fanfic.tags.join(", ")}<i> </p>
+            <p>${fanfic.fandom} | ${fanfic.category.join(", ")} | ${fanfic.size} (${Number(fanfic['word count']).toLocaleString()} words)</p>
+            <p><b>${fanfic.warnings.join(", ")}</b> <i>${fanfic.tags.join(", ")}<i> </p>
         `;
         resultsDiv.appendChild(fanficDiv);
     });

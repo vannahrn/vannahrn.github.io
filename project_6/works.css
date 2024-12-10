@@ -145,7 +145,8 @@ sup {
 }
 
 h3 {
-    font-size:15px;
+    font-size:20px;
+    color:#9a0101;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight:normal;
 }
@@ -354,6 +355,11 @@ fieldset {
     border:1px solid gray;
     padding:10px;
     border-radius:5px;
+}
+
+p {
+    font-size:15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
   
 @media (max-width: 600px) {
