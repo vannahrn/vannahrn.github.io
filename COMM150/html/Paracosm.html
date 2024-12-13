@@ -54,15 +54,17 @@ img {
   width:50%;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake" tags="" position="500,200" size="100,100">Cold... It&#39;s [[really...|wake 2]] cold?
+.visited {
+  color:#1C6E8C;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake" tags="" position="500,200" size="100,100">Cold... It&#39;s [[really...|wake 2]] cold?
 (set: $clarity to 0)   &lt;!-- set initial clarity to 0 --&gt;
-(set: $anxiety to 0)   &lt;!-- set initial anxiety to 0 --&gt;</tw-passagedata><tw-passagedata pid="2" name="wake 2" tags="" position="625,200" size="100,100">(set: $clarity to $clarity + 1)
-My eyes are [[heavy|wake 3]]. 
+(set: $anxiety to 0)   &lt;!-- set initial anxiety to 0 --&gt;</tw-passagedata><tw-passagedata pid="2" name="wake 2" tags="" position="625,200" size="100,100">My eyes are [[heavy|wake 3]]. 
 
 //What time is it?//
 
 &lt;img src=&quot;images/openwindow.png&quot;/&gt;</tw-passagedata><tw-passagedata pid="3" name="wake 3" tags="" position="750,200" size="100,100">&lt;img src=&quot;images/clock.png&quot;/&gt;
 
+(set: $clarity to $clarity + 1)
 //Tick.//
 
 My head [[really hurts|stay]].
@@ -77,7 +79,7 @@ With the window closed, things should start feeling [[normal|stay]] again.
 
 //I still feel bad, but not terrible anymore.//
 
-(if: $clarity &gt;= 2)[[[i should get up.|break 2]]]
+(if: $clarity &gt;= 2)[i should [[get up.|break 2]]]
 
 my body feels [[heavy|bed]], though.</tw-passagedata><tw-passagedata pid="5" name="break 2" tags="" position="875,450" size="100,100">(set: $clarity to $clarity + 2)
 //i must be still waking up.//
@@ -87,7 +89,6 @@ my body feels [[heavy|bed]], though.</tw-passagedata><tw-passagedata pid="5" nam
 &lt;img src=&quot;images/mirror.png&quot;&gt;
 
 ...I need to clean, too. My room looks almost [[unfamiliar|where]].</tw-passagedata><tw-passagedata pid="6" name="mirror" tags="" position="1125,600" size="100,100">(set: $clarity to $clarity + 2)
-
 &lt;img src=&quot;images/notes.png&quot;/&gt;
 
 [[sticky notes|summer]] riddle the frame of the mirror.
@@ -95,8 +96,7 @@ my body feels [[heavy|bed]], though.</tw-passagedata><tw-passagedata pid="5" nam
 //i don&#39;t need to be reminded.//
 
 i understand my [[consequences|bed]], but there is [[comfort|escape]] in what i want i want to be [[true|where]]. </tw-passagedata><tw-passagedata pid="7" name="stay" tags="" position="625,350" size="100,100">(set: $anxiety to $anxiety + 1)
-(set: $clarity to $clairty - 1)
-
+(set: $clarity to $clairty - 2)
 (text-style:&quot;blur&quot;)[My brain feels so foggy].
 
 //im not even sure where i am right now.//
@@ -108,7 +108,7 @@ i understand my [[consequences|bed]], but there is [[comfort|escape]] in what i 
 But being in [[bed|bed]] is so much better.
 
 &lt;img src=&quot;images/night.png&quot;/&gt;</tw-passagedata><tw-passagedata pid="8" name="bed" tags="" position="625,475" size="100,100">(set: $anxiety to $anxiety + 2)
-it&#39;s as easy as closing your eyes.
+it&#39;s as easy as closing your [[eyes|where]].
 
 //and it&#39;s better if you do//
 
@@ -122,8 +122,7 @@ why would i [[stop|escape]]?
 
 &lt;img src=&quot;images/closedeyes.jpg&quot;/&gt;
 
-(if: $anxiety &gt;=6)[it&#39;s no use. i&#39;ll always go to back what i [[created|bad end 1]]]</tw-passagedata><tw-passagedata pid="9" name="where" tags="" position="750,625" size="100,100">(set: $anxiety to $anxiety + 1)
-
+(if: $anxiety &gt;=5)[it&#39;s no use. i&#39;ll always go to back what i [[created|bad end 1]]]</tw-passagedata><tw-passagedata pid="9" name="where" tags="" position="750,650" size="100,100">(set: $anxiety to $anxiety + 2)
 i much prefer my other room.
 
 //there is no other room//
@@ -132,21 +131,21 @@ the paint isn&#39;t chipping and i have a beautiful view from the window.
 
 //not a tangible one, at least//
 
-(if:$clarity &gt;= 4)[everyday, i go to the same place in my [[mind|bad end 2]].]
-(if:$clarity &lt;= 4)[every, i get this feeling that i am longing for [[something else|escape]].]</tw-passagedata><tw-passagedata pid="10" name="escape" tags="" position="525,650" size="100,100">(set: $anxiety to $anxiety + 1)
+(if:$clarity &lt;= 4)[everyday, i go to the same place in my [[mind|bad end 2]].]
 
+(if:$clarity &gt;= 4)[every, i get this feeling that i am longing for [[something else|escape]].]</tw-passagedata><tw-passagedata pid="10" name="escape" tags="" position="525,650" size="100,100">(set: $anxiety to $anxiety + 1)
 the...experiences...? in my mind are much safer than [[reality|summer]].
 
 things are beautiful because i make them beautiful.
 
 //i feel better knowing i&#39;m in control//
 
-suffering doesn&#39;t have to [[exist|crash]].</tw-passagedata><tw-passagedata pid="11" name="crash" tags="" position="950,650" size="100,100">i don&#39;t hate reality, i just hate uncertainty
+suffering doesn&#39;t have to [[exist|crash]].</tw-passagedata><tw-passagedata pid="11" name="crash" tags="" position="950,650" size="100,100">(set: $anxiety to $anxiety + 1)
+i don&#39;t hate reality, i just hate uncertainty
 
 &lt;img src=&quot;images/lounge.png&quot;/&gt;
 
 since that [[summer|event]]... i&#39;ve found things to be [[easier|bed]] if i just stick to myself</tw-passagedata><tw-passagedata pid="12" name="event" tags="" position="600,800" size="100,100">(set: $clarity to $clarity + 2)
-
 a lot happened that summer, too [[quickly|bed]].
 
 //there&#39;s no need to spend time on those details//
@@ -165,7 +164,7 @@ the sticky notes on my mirror are supposed to remind me to stay present.
 
 but i keep going back to the same [[dream|bed]]
 
-&lt;img src=&quot;flower2.jpg&quot;/&gt;</tw-passagedata><tw-passagedata pid="14" name="present" tags="" position="1125,875" size="100,100">(set: $clarity to $clarity + 2)
+&lt;img src=&quot;images/dual.jpg&quot;/&gt;</tw-passagedata><tw-passagedata pid="14" name="present" tags="" position="1125,875" size="100,100">(set: $clarity to $clarity + 2)
 
 i am getting better, but thing aren&#39;t necessarily easier.
 
@@ -175,7 +174,7 @@ i am getting better, but thing aren&#39;t necessarily easier.
 
 i still dream, but my dreams are [[new|new]]</tw-passagedata><tw-passagedata pid="15" name="bad end 1" tags="" position="325,525" size="100,100">end.
 
-//you ended the game with level $clarity clarity and level $anxiety anxiety//
+//you ended the game with $clarity clarity and $anxiety anxiety//
 </tw-passagedata><tw-passagedata pid="16" name="new" tags="" position="700,975" size="100,100">//the reality i want is always tempting//
 
 i still think of the [[idyllic world|bed]] i&#39;ve created
@@ -189,22 +188,21 @@ everyday, we make choices
 
 //choices that are echoes of what we want to be true//
 
-let the past [[bury us|escape]] or see how it [[recreates|good end 2]] us
+we can let the past [[bury us|escape]] or see how it [[recreates|good end 2]] us
 
 &lt;img src=&quot;images/recreate.jpg&quot;/&gt;</tw-passagedata><tw-passagedata pid="18" name="good end 1" tags="" position="1175,1100" size="100,100">i can dream.
 
 i can dream of the future without letting the past dictate me.
 
-//you ended the game with level $clarity clarity and level $anxiety anxiety.//
+//you ended the game with $clarity clarity and $anxiety anxiety.//
 
-end.</tw-passagedata><tw-passagedata pid="19" name="good end 2" tags="" position="925,1150" size="100,100">(set: $clarity to $clarity + 1)
-it hurts but it&#39;s the only way out.
+end.</tw-passagedata><tw-passagedata pid="19" name="good end 2" tags="" position="925,1150" size="100,100">it hurts but it&#39;s the only way out.
 
-//you ended the game with level $clarity clarity and level $anxiety anxiety.//</tw-passagedata><tw-passagedata pid="20" name="bad end 2" tags="" position="325,700" size="100,100">i&#39;ll continue to go there.
+//you ended the game with $clarity clarity and $anxiety anxiety.//</tw-passagedata><tw-passagedata pid="20" name="bad end 2" tags="" position="325,700" size="100,100">i&#39;ll continue to go there.
 
-//there is no use in rediscovering a reality destined to fail me//
+there is no use in rediscovering a reality destined to fail me.
 
-//you ended the game with level $clarity clarity and level $anxiety anxiety.//</tw-passagedata></tw-storydata>
+//you ended the game with $clarity clarity and $anxiety anxiety.//</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
