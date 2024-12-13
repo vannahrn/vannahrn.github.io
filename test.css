@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    cursor:crosshair;
+    font-family: "Karla", sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    cursor:help;
+}
+
+h1 {
+    font-family: "Playwrite DK Loopet", cursive;
+    color:white;
+    font-size:3vw;
+    text-transform: lowercase;
+}
+
+h2 {
+    color:white;
+    font-size:1vw;
+    font-weight:normal;
+    letter-spacing:3px;
+}
+
+aside {
+    background-color:black;
+    color:white;
+    width:40%;
+    height:100vh;
+    line-height:50px;
+    text-align:center;
+    align-items: center;
+    align-content: center;
+    float:left;
+    position:absolute;
+}
+
+aside img {
+    width:15vw;
+    transition-duration: .3s;
+    opacity: 0;
+    animation: fadeIn .5s ease-in forwards;
+}
+
+aside img:hover {
+    transform: rotate(20deg);
+    width:17vw;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+aside h1, h2 {
+    opacity:0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay:.5s;
+}
+
+main {
+    float:right;
+    width:60%;
+    height:100vh;
+    right:0;
+    background-color:white;
+}
+
+main img {
+    height:auto;
+    width:50%;
+}
+
+section {
+    margin:50px 100px;
+
+}
+
+h3 {
+    color:#E6308A;
+    font-size:30px;
+    text-align:justify;
+    text-justify: inter-word;
+    display:inline;
+    font-family: "Space Mono", monospace;
+}
+
+p {
+    color:black;
+    display:inline;
+    font-size:15px;
+    font-weight:normal;
+    font-family: "Karla", sans-serif;
+}
+
+h3, p {
+    opacity:0;
+    animation: fadeIn .5s ease-in forwards;
+    animation-delay:.8s;
+}
+
+
+.link {
+    font-size:bolder;
+    font-family: "Space Mono", monospace;
+    font-size:15px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    border:none;
+    border-bottom: 2px solid black;
+    background-color:none;
+    padding-bottom:3px;
+    margin:0px 5px;
+    background-color:white;
+    transition-duration:.5s;
+
+}
+
+button:hover {
+    letter-spacing:5px;
+    transition-duration:.5s;
+    cursor:help;
+}
+
+nav {
+    position:sticky;
+    top:0;
+    text-align:right;
+    padding:50px 100px 0px 50px;
+    color:black;
+    opacity:0;
+    animation: fadeIn .5s ease-in forwards;
+    animation-delay:.3s;
+}
+
+.info {
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:25px;
+    align-items:center;
+    text-align:justify;
+    text-justify: inter-word;
+}
+
+footer {
+    background-color:#E6308A;
+    color:white;
+    font-size:12px;
+    text-align:right;
+    font-family: "Karla", sans-serif;
+    padding:50px;
+}
+
+b {
+    font-family: "Playwrite DK Loopet", cursive;
+}
+
+.right {
+    text-align:right;
+}
+.right img {
+    height:150px;
+    width:auto;
+    border-radius:100px;
+    filter:grayscale(100);
+    opacity:0;
+    animation: fadeIn .5s ease-in forwards;
+    animation-delay:.5s;
+}
+
+
+@keyframes fadeIn {
+    to {
+      opacity: 1; /* End fully visible */
+    }
+  }
